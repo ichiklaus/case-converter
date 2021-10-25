@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200;400&display=swap');
+
+:root {
+    --some-blue: rgb(84,81,214);
+    --some-violet: rgb(88,71,199);
+    --bg-grayblue:rgb(219,233,246);
+}
+
+/*****************************************
+ *   Base Styles
+ */
+
+html, body, .container {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--bg-grayblue);
+}
+
+body, * {
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    width: 480px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: var(--some-violet);
+    padding: 1.5em;
+    border-radius: 50px;
+}
+
+.title {
+    text-align: center;
+    margin: 1em;
+    color: white;
+    font-size: 2.5em;
+}
+
+.area {
+    margin: .75em;
+    padding: 2em;
+    resize: none;
+    font-weight: 200;
+}
+
+.action-btn {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    align-items: center;
+    margin: .75em;
+}
+
+.btn-style {
+
+}
+
+.btn {
+    padding: 1.25em;
+    border-style: hidden;
+    background: var(--some-blue);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    font-weight: 400;
+}
+
+.btn.save {
+    grid-column-end: span 2;
+}
+
+.btn:hover {
+    background: var(--bg-grayblue);
+    color: var(--some-blue);
+    cursor: pointer;
+}
